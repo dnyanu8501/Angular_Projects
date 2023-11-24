@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 
 import { OwnerRoutingModule } from './owner-routing.module';
 import { OwnerLoginComponent } from './owner-login/owner-login.component';
+import { SharedModule } from '../shared/shared/shared.module';
+
 
 
 @NgModule({
@@ -11,7 +13,8 @@ import { OwnerLoginComponent } from './owner-login/owner-login.component';
   ],
   imports: [
     CommonModule,
-    OwnerRoutingModule
+    OwnerRoutingModule,
+    SharedModule
   ]
 })
 export class OwnerModule { }
