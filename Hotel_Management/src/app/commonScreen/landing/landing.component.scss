@@ -1,0 +1,19 @@
+.navbar{
+    height: 40px;
+    background-color: bisque;
+}
+button{
+    margin: 5px 10px;
+    padding: 4px 8px;
+    background-color: rgb(67, 95, 95);
+    border-radius: 6px;
+    float: right;
+    color: white;
+}
+button:hover{
+    background-color: rgb(236, 243, 236);
+    color: black;
+}
+.container{
+    background-image: url('/Angular_Projects/Hotel_Management/src/assets/images.jpg');
+}
