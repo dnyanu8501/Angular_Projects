@@ -1,7 +1,68 @@
 {
-  "admin" : [], 
-  "owner " : [], 
-  "user" : [], 
-  "hotelDetails":[], 
-  "hotelBooking":[] 
+  "admin": [],
+  "owner": [
+    {
+      "fname": "ram",
+      "pan": "JHS37H6",
+      "email": "ram1@gmail.com",
+      "password": "1234",
+      "conpassword": "1234",
+      "id": 1
+    },
+    {
+      "fname": "pavan",
+      "pan": "GF36G4",
+      "email": "pavan1@gmail.com",
+      "password": "12345",
+      "conpassword": "12345",
+      "id": 2
+    },
+    {
+      "fname": "SSSA",
+      "pan": "DFS",
+      "email": "ghg@gmail.com",
+      "password": "221",
+      "conpassword": "221",
+      "id": 3
+    },
+    {
+      "fname": "sachin",
+      "pan": "SACHIN",
+      "email": "sachin@gmail.com",
+      "password": "1111",
+      "conpassword": "1111",
+      "gender": "male",
+      "id": 4
+    },
+    {
+      "fname": "dhulu",
+      "pan": "DHULU",
+      "email": "dhulu@gmail.com",
+      "password": "2222",
+      "conpassword": "2222",
+      "gender": "male",
+      "id": 5
+    },
+    {
+      "fname": "omkar",
+      "pan": "OM",
+      "email": "omkar@gmail.com",
+      "password": "3333",
+      "conpassword": "3333",
+      "gender": "female",
+      "id": 6
+    },
+    {
+      "fname": "Dnyanu",
+      "pan": "DKSPG2956T",
+      "email": "dnyanu@gmail.com",
+      "password": "8501",
+      "conpassword": "8501",
+      "gender": "male",
+      "id": 7
+    }
+  ],
+  "user": [],
+  "hotelDetails": [],
+  "hotelBooking": []
 }

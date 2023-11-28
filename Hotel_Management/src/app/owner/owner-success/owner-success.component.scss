@@ -1,0 +1,46 @@
+.main{
+    margin-right: 50px;
+   
+}
+.container{
+    background-image: url("../../../assets/images/hotel2.jpg");
+    background-size: cover;
+    height: 600px;
+}
+.btn{
+padding: 8px;
+float: right;
+
+margin :14px;
+background-color:rgb(217, 144, 9);
+color: rgb(42, 6, 6);
+font-size: 16px;
+border-radius: 10px;
+box-shadow: 5px 5px 4px rgb(1, 1, 1);
+
+}
+.backbtn{
+    float: right;
+    padding: 5px;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 5px 5px 4px rgb(253, 253, 253)
+   
+   
+
+}
+.backbtn:hover{
+    box-shadow: 5px 5px 4px rgb(16, 15, 15);
+    background-color: rgb(253, 247, 247);
+    color: rgb(4, 3, 3);
+
+}
+.btn:hover{
+    padding: 9px;
+    margin :16px;
+    background-color:rgb(185, 20, 6);
+    color: rgb(241, 215, 215);
+    box-shadow: 7px 8px 8px rgb(255, 255, 255);
+    
+}

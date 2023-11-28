@@ -1,0 +1,55 @@
+.main{
+    background-image: url(../../../assets/images/hotel7.jpg);
+    background-size: cover;
+    height: 530px;
+    padding-top: 80px;
+    padding-left: 20%;
+}
+.container{
+  
+   
+    text-align: center;
+    border-top-right-radius: 35px;
+    border-bottom-left-radius: 35px;
+    background-image: url(../../../assets/images/hotel.jpg);
+    opacity: 0.9;
+   
+    width: 75%;
+    // border: 2px solid black;
+
+}
+
+
+input{
+    padding: 9px;
+    width: 44%;
+    margin: 6px;
+    border-radius: 20px;
+   
+   
+}
+h2{
+    color: rgb(149, 240, 243);
+    padding: 15px;
+    
+}
+button{
+    background-color: orange;
+    padding: 5px;
+    border-radius: 10px;
+    font-size: 15px;
+    margin: 20px;
+}
+.backbtn{
+    float: right;
+    margin: 10px;
+    margin-right: 25px;
+    background-color: black;
+    color: white;
+    border-radius: 15px;
+    padding: 4px;
+    
+}
+.backbtn:hover{
+    color: aqua;
+}
