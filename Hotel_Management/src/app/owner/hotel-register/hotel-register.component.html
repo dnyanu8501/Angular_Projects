@@ -1,23 +1,29 @@
 <div class="main">
 <div class="container">
-   <label class="backbtn">Back</label>
+   <label class="backbtn" (click)="back()">Back</label>
     <h2> Hotel Register</h2>
-    <form><div>
+    <form [formGroup]="registerForm">
+      <div>
         
-       <input type="text" placeholder="Hotel Name">
-      <input type="text"  placeholder="Hotel Loacation">
+       <input type="text" placeholder="Owner Name" formControlName="ownername">
+      <input type="number"  placeholder="Owner Mobile No." formControlName="ownermobile">
+        <br>
+        <span *ngIf="registerForm.get('ownername')?.errors?.['required'] && registerForm.get('ownername')?.touched" class="first">Owner Name Required *</span>
+        <span class="second">sdfagjhgsdgisdguifh</span>
+        <br>
+      <input type="text"  placeholder="Hotel Name" formControlName="hotelname">
+       <input type="text"  placeholder="Hotel Address" formControlName="hoteladdress">
         <br><br>
-      <input type="text"  placeholder="Hotel Name">
-       <input type="text"  placeholder="Hotel Name">
-        <br><br>
-        <input type="text"  placeholder="Hotel Name">
-        <input type="text"  placeholder="Hotel Name">
+        <input type="text"  placeholder="Hotel Mobile No." formControlName="hotelmobile">
+        <input type="text"  placeholder="Hotel Rating" formControlName="rating">
           <br><br>
-        <input type="text"  placeholder="Hotel Name">
-         <input type="text"  placeholder="Hotel Name">
+        <input type="text"  placeholder="Available Rooms" formControlName="room">
+         <input type="text"  placeholder="Room Price" formControlName="price">
           <br>
+          <label>Hotel Images :-</label>
+          <input type="file" formControlName="hotelimages">
        <br>
-       <button>Submit</button>
+       <button (click)="submit()">Submit</button>
        <button>Reset</button>
        
        </div>

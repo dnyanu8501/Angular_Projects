@@ -1,5 +1,5 @@
 .main{
-    background-image: url(../../../assets/images/hotel7.jpg);
+    background-image: url(../../../assets/images/hotel15.jpg);
     background-size: cover;
     height: 530px;
     padding-top: 80px;
@@ -12,6 +12,7 @@
     border-top-right-radius: 35px;
     border-bottom-left-radius: 35px;
     background-image: url(../../../assets/images/hotel.jpg);
+    // background-color: rgb(248, 243, 243);
     opacity: 0.9;
    
     width: 75%;
@@ -52,4 +53,21 @@ button{
 }
 .backbtn:hover{
     color: aqua;
+}
+label{
+    color: rgb(244, 248, 248);
+   
+}
+input[type="file"]{
+    color: beige;
+    
+}
+.first{
+    float: left;
+    margin-left: 30px;
+    color: rgb(248, 68, 68);
+}
+.second{
+    margin-left: 90px;
+    color: red;
 }
