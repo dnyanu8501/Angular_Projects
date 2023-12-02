@@ -6,6 +6,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class ApiCallService {
+
  url="http://localhost:3000/"
 
   constructor(private httpClient:HttpClient) { }

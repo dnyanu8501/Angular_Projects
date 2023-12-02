@@ -41,6 +41,7 @@ export class OwnerLoginComponent {
           if(ele.fname==this.ownerLoginForm.value.userName && ele.password==this.ownerLoginForm.value.password){
             console.log(this.ownerLoginForm.value);
             this.wrongpass=false;
+            
             this.router.navigateByUrl('owner/ownersuccess')
           }
           else{

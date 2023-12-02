@@ -8,6 +8,11 @@ import { OwnerSignupComponent } from './owner-signup/owner-signup.component';
 import { OwnerSuccessComponent } from './owner-success/owner-success.component';
 import { HotelRegisterComponent } from './hotel-register/hotel-register.component';
 import { HotelListComponent } from './hotel-list/hotel-list.component';
+import { ChangeimagepathPipe } from './pipes/changeimagepath.pipe';
+import { SearchListPipe } from './pipes/search-list.pipe';
+
+
+
 
 
 
@@ -17,12 +22,18 @@ import { HotelListComponent } from './hotel-list/hotel-list.component';
     OwnerSignupComponent,
     OwnerSuccessComponent,
     HotelRegisterComponent,
-    HotelListComponent
+    HotelListComponent,
+    ChangeimagepathPipe,
+    SearchListPipe,
+   
+
+   
   ],
   imports: [
     CommonModule,
     OwnerRoutingModule,
     SharedModule
+
   ]
 })
 export class OwnerModule { }

@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./owner-success.component.scss']
 })
 export class OwnerSuccessComponent {
-
+ 
 constructor(private router:Router){}
   back(){
     this.router.navigateByUrl('owner/ownerlogin')

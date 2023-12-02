@@ -73,6 +73,7 @@
       "rating": "3",
       "room": "23",
       "price": "1200",
+      "hotelimages": "C:\\fakepath\\hotel2.jpg",
       "id": 1
     },
     {
@@ -84,8 +85,32 @@
       "rating": "4.5",
       "room": "20",
       "price": "2399",
-      "hotelimages": "C:\\fakepath\\hotel2.jpg",
+      "hotelimages": "C:\\fakepath\\hotel7.jpg",
       "id": 2
+    },
+    {
+      "ownername": "ram",
+      "ownermobile": "1234345465",
+      "hotelname": "sagar hotel",
+      "hoteladdress": "pune",
+      "hotelmobile": "1234454554",
+      "rating": "4",
+      "room": "45",
+      "price": "800",
+      "hotelimages": "C:\\fakepath\\HOTEL3.jpg",
+      "id": 3
+    },
+    {
+      "ownername": "mahesh",
+      "ownermobile": "9788223022",
+      "hotelname": "Malavani Katta",
+      "hoteladdress": "pune",
+      "hotelmobile": "9784366736",
+      "rating": "5",
+      "room": "25",
+      "price": "1350",
+      "hotelimages": "C:\\fakepath\\hotel6.jpg",
+      "id": 4
     }
   ],
   "hotelBooking": []

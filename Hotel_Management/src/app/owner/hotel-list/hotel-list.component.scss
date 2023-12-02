@@ -1,0 +1,75 @@
+.main{
+    background-image: url(../../../assets/images/hotel15.jpg);
+    background-size: cover;
+    height: 530px;
+    padding-top: 80px;
+    position: absolute;
+ 
+   
+ 
+}
+.container{
+    height: 170px;
+    background-color: aliceblue;
+    margin: 50px;
+ 
+  
+}
+img{
+    float: left;
+    padding: 5px;
+}
+.hoteldetail{
+ margin-left: 20px;
+  text-align: center;
+  position: sticky;
+
+}
+.main2{
+    float: right;
+    margin-right: 30px;
+    position: sticky;
+    // position: absolute;
+    // padding-bottom: 15px;
+   
+}
+label{
+   padding-left: 100px;
+  
+}
+
+
+.fix{
+    position: sticky;
+    height: 15px;
+    top: 0px;
+    /* z=positive element will come in front */
+    z-index: 1;
+    width: 1406px;
+   
+}
+.overflowTest {
+    // background: #4CAF50;
+    // color: white;
+    padding: 15px;
+    width: 90%;
+    height: 480px;
+    overflow: scroll;
+    border: 1px solid #ccc;
+  }
+  input[type="search"]{
+    color: rgb(24, 23, 23);
+    background-color: #ffffff;
+    padding: 10px;
+    width: 60%;
+    border-radius: 20px;
+    margin-left: 40px;
+  }
+  .backbtn{
+    padding: 5px;
+    color: white;
+    background-color: black;
+    font-size: 18px;
+   margin-left: 60px;
+   border-radius: 10px;
+  }

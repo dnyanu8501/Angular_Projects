@@ -11,6 +11,7 @@ import { ApiCallService } from 'src/app/commonSevices/api-call.service';
 export class HotelRegisterComponent {
   registerForm!:FormGroup;
   endPoint="hotelDetails"
+  imagepath:any;
 
 constructor(private router:Router,private fb:FormBuilder,private apiCallService:ApiCallService){}
 ngOnInit(){
@@ -18,14 +19,14 @@ ngOnInit(){
 }
 formAllData(){
   this.registerForm=this.fb.group({
-    ownername:['',[Validators.required]],
-    ownermobile:[],
-    hotelname:[],
-    hoteladdress:[],
-    hotelmobile:[],
-    rating:[],
-    room:[],
-    price:[],
+    ownername:['',[Validators.required,Validators.pattern('[a-zA-z]*')]],
+    ownermobile:['',[Validators.required,Validators.pattern('[0-9]*')]],
+    hotelname:['',[Validators.required]],
+    hoteladdress:['',[Validators.required]],
+    hotelmobile:['',[Validators.required,Validators.pattern('[0-9]*')]],
+    rating:['',[Validators.required,Validators.pattern('[0-5]')]],
+    room:['',[Validators.required,Validators.pattern('[0-9]*')]],
+    price:['',[Validators.required,Validators.pattern('[0-9]*')]],
     hotelimages:[]
 
   })
@@ -33,6 +34,7 @@ formAllData(){
 
 submit(){
   this.apiCallService.postApiCall(this.endPoint,this.registerForm.value).subscribe(res =>{
+   
     this.router.navigateByUrl("owner/ownersuccess")
   })
 }

@@ -6,24 +6,40 @@
       <div>
         
        <input type="text" placeholder="Owner Name" formControlName="ownername">
-      <input type="number"  placeholder="Owner Mobile No." formControlName="ownermobile">
+      <input type="text" maxlength="10" placeholder="Owner Mobile No." formControlName="ownermobile">
         <br>
         <span *ngIf="registerForm.get('ownername')?.errors?.['required'] && registerForm.get('ownername')?.touched" class="first">Owner Name Required *</span>
-        <span class="second">sdfagjhgsdgisdguifh</span>
+        <span *ngIf="!registerForm.get('ownername')?.errors?.['required'] && registerForm.get('ownername')?.errors?.['pattern']" class="first">Enter Character Only</span>
+        <span *ngIf="registerForm.get('ownermobile')?.errors?.['required'] && registerForm.get('ownermobile')?.touched" class="second">Owner Mobile No.is Required *</span>
+        <span *ngIf="!registerForm.get('ownermobile')?.errors?.['required'] && registerForm.get('ownermobile')?.errors?.['pattern']" class="second">Only  Number Allowed</span>
         <br>
       <input type="text"  placeholder="Hotel Name" formControlName="hotelname">
        <input type="text"  placeholder="Hotel Address" formControlName="hoteladdress">
-        <br><br>
-        <input type="text"  placeholder="Hotel Mobile No." formControlName="hotelmobile">
-        <input type="text"  placeholder="Hotel Rating" formControlName="rating">
-          <br><br>
+        <br>
+        <span *ngIf="registerForm.get('hotelname')?.errors?.['required'] && registerForm.get('hotelname')?.touched" class="first">Hotel Name is Required *</span>
+        <span *ngIf="registerForm.get('hoteladdress')?.errors?.['required'] && registerForm.get('hoteladdress')?.touched" class="second">Hotel Address is Required *</span>
+        <br>
+        <input type="text"  maxlength="10" placeholder="Hotel Mobile No." formControlName="hotelmobile">
+        <input type="text"  placeholder="Hotel Rating   ex:- 1 To 5" formControlName="rating">
+          <br>
+          
+          <span *ngIf="registerForm.get('hotelmobile')?.errors?.['required'] && registerForm.get('hotelmobile')?.touched" class="first">Hotel Mobile No.is Required *</span>
+          <span *ngIf="!registerForm.get('hotelmobile')?.errors?.['required'] && registerForm.get('hotelmobile')?.errors?.['pattern']" class="first">Only  Number Allowed</span>
+          <span *ngIf="registerForm.get('rating')?.errors?.['required'] && registerForm.get('rating')?.touched" class="second">Rating is Required *</span>
+          <span *ngIf="!registerForm.get('rating')?.errors?.['required'] && registerForm.get('rating')?.errors?.['pattern']" class="second">Enter Rating 1 To 5</span>
+          <br>
         <input type="text"  placeholder="Available Rooms" formControlName="room">
          <input type="text"  placeholder="Room Price" formControlName="price">
           <br>
+          <span *ngIf="registerForm.get('room')?.errors?.['required'] && registerForm.get('room')?.touched" class="first">Available Rooms are Required *</span>
+          <span *ngIf="!registerForm.get('room')?.errors?.['required'] && registerForm.get('room')?.errors?.['pattern']" class="first">Only Number Allowed</span>
+          <span *ngIf="registerForm.get('price')?.errors?.['required'] && registerForm.get('price')?.touched" class="second">Room Price Required *</span>
+          <span *ngIf="!registerForm.get('price')?.errors?.['required'] && registerForm.get('price')?.errors?.['pattern']" class="second">Only Number Allowed</span>
+          <br>
           <label>Hotel Images :-</label>
-          <input type="file" formControlName="hotelimages">
+          <input type="file" formControlName="hotelimages" >
        <br>
-       <button (click)="submit()">Submit</button>
+       <button [disabled]="!registerForm.valid" (click)="submit()">Submit</button>
        <button>Reset</button>
        
        </div>
