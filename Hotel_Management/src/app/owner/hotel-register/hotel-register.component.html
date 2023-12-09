@@ -38,8 +38,11 @@
           <br>
           <label>Hotel Images :-</label>
           <input type="file" formControlName="hotelimages" >
-       <br>
-       <button [disabled]="!registerForm.valid" (click)="submit()">Submit</button>
+      <!-- <br>
+          <label class="note"><b>Note :</b>   user name and owner name should be same</label> -->
+          <br>
+       <button  *ngIf="!recordById" [disabled]="!registerForm.valid" (click)="submit()">Submit</button>
+       <button *ngIf="recordById" (click)="update()">Update</button>
        <button>Reset</button>
        
        </div>

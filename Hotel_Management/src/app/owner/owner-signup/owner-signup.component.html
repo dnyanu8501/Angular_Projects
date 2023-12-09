@@ -46,7 +46,7 @@
                    <span class="passicon" *ngIf="!conpass" (click)="hideconpass()"><i class="bi bi-eye-slash-fill"></i></span>
                   <span class="err" *ngIf="signControlForm.get('conpassword')?.errors?.['maxlength']"> Maximum 15 Character Allowed</span>
                    <span class="err" *ngIf="!signControlForm.get('conpassword')?.errors?.['maxlength'] && signControlForm.get('conpassword')?.errors?.['pattern']"> Enter Strong Password</span>
-                  <span class="err" *ngIf="!checkpass">password not match</span>
+                  <span class="err" *ngIf="!signControlForm.get('conpassword')?.errors?.['required'] && !checkpass">password not match</span>
                    <br>
                   
                  

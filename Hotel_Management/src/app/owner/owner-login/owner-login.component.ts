@@ -41,7 +41,8 @@ export class OwnerLoginComponent {
           if(ele.fname==this.ownerLoginForm.value.userName && ele.password==this.ownerLoginForm.value.password){
             console.log(this.ownerLoginForm.value);
             this.wrongpass=false;
-            
+            this.apiCallService.loginUserName=this.ownerLoginForm.value.userName;
+            alert("login successfully")
             this.router.navigateByUrl('owner/ownersuccess')
           }
           else{
@@ -59,6 +60,9 @@ export class OwnerLoginComponent {
   }
   signup(){
     this.router.navigateByUrl('owner/signup')
+  }
+  back(){
+    this.router.navigateByUrl('owner/home')
   }
   
 

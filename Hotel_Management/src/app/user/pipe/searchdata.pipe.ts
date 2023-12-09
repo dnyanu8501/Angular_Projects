@@ -1,0 +1,28 @@
+import { Pipe, PipeTransform } from '@angular/core';
+
+@Pipe({
+  name: 'searchdata'
+})
+export class SearchdataPipe implements PipeTransform {
+
+  transform(value: any, searchValue: any): any {
+    // console.log(value);
+    // console.log(searchValue);
+    if(!searchValue)
+    {
+      return value
+    }
+    
+    let originalsearchvalue=searchValue.toString().toLowerCase();
+     return value.filter((item:any) =>{
+      console.log(item.ownername);
+    
+        return JSON.stringify(item).toLowerCase().includes(originalsearchvalue);
+      
+     })
+    
+    
+ 
+  }
+
+}

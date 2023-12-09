@@ -54,6 +54,7 @@ export class OwnerSignupComponent {
       this.checkpass=false
     }
   }
+  
 
   submit(){
     this.apiCallService.postApiCall(this.endPoint,this.signControlForm.value).subscribe(res =>{

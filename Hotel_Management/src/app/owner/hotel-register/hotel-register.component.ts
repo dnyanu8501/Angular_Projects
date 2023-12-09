@@ -12,27 +12,40 @@ export class HotelRegisterComponent {
   registerForm!:FormGroup;
   endPoint="hotelDetails"
   imagepath:any;
+  user:any;
+  id:any;
+  recordById:any;
 
 constructor(private router:Router,private fb:FormBuilder,private apiCallService:ApiCallService){}
 ngOnInit(){
+  this.id=this.apiCallService.id;
+  this.recordById=this.apiCallService.recordById;
+  this.user=this.apiCallService.loginUserName
   this.formAllData()
+
+  
 }
 formAllData(){
+//  console.log(this.user);
+ 
   this.registerForm=this.fb.group({
-    ownername:['',[Validators.required,Validators.pattern('[a-zA-z]*')]],
-    ownermobile:['',[Validators.required,Validators.pattern('[0-9]*')]],
-    hotelname:['',[Validators.required]],
-    hoteladdress:['',[Validators.required]],
-    hotelmobile:['',[Validators.required,Validators.pattern('[0-9]*')]],
-    rating:['',[Validators.required,Validators.pattern('[0-5]')]],
-    room:['',[Validators.required,Validators.pattern('[0-9]*')]],
-    price:['',[Validators.required,Validators.pattern('[0-9]*')]],
-    hotelimages:[]
+    ownername:[this.recordById ? this.recordById[0].ownername:'',[Validators.required,Validators.pattern('[a-zA-z]*')]],
+    ownermobile:[this.recordById ? this.recordById[0].ownermobile:'',[Validators.required,Validators.pattern('[0-9]*')]],
+    hotelname:[this.recordById ? this.recordById[0].hotelname:'',[Validators.required]],
+    hoteladdress:[this.recordById ? this.recordById[0].hoteladdress:'',[Validators.required]],
+    hotelmobile:[this.recordById ? this.recordById[0].hotelmobile:'',[Validators.required,Validators.pattern('[0-9]*')]],
+    rating:[this.recordById ? this.recordById[0].rating:'',[Validators.required,Validators.pattern('[0-5]')]],
+    room:[this.recordById ? this.recordById[0].room:'',[Validators.required,Validators.pattern('[0-9]*')]],
+    price:[this.recordById ? this.recordById[0].price:'',[Validators.required,Validators.pattern('[0-9]*')]],
+    // hotelimages:[this.recordById ? this.recordById[0].hotelimages:''],
+    hotelimages:[''],
+    username:[this.user]
 
   })
 }
 
-submit(){
+
+ submit(){
   this.apiCallService.postApiCall(this.endPoint,this.registerForm.value).subscribe(res =>{
    
     this.router.navigateByUrl("owner/ownersuccess")
@@ -40,6 +53,12 @@ submit(){
 }
   back(){
     this.router.navigateByUrl("owner/ownersuccess")
+  }
+  update(){
+    this.apiCallService.patchApiCall(this.endPoint,this.id,this.registerForm.value).subscribe(res=>{
+      // console.log("res>>>>>",res);
+      this.router.navigateByUrl('owner/hotelList')
+    })
   }
 
 }

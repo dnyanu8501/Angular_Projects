@@ -18,48 +18,13 @@
       "id": 2
     },
     {
-      "fname": "SSSA",
-      "pan": "DFS",
-      "email": "ghg@gmail.com",
-      "password": "221",
-      "conpassword": "221",
-      "id": 3
-    },
-    {
-      "fname": "sachin",
-      "pan": "SACHIN",
-      "email": "sachin@gmail.com",
-      "password": "1111",
-      "conpassword": "1111",
-      "gender": "male",
-      "id": 4
-    },
-    {
-      "fname": "dhulu",
-      "pan": "DHULU",
-      "email": "dhulu@gmail.com",
-      "password": "2222",
-      "conpassword": "2222",
-      "gender": "male",
-      "id": 5
-    },
-    {
-      "fname": "omkar",
-      "pan": "OM",
-      "email": "omkar@gmail.com",
-      "password": "3333",
-      "conpassword": "3333",
-      "gender": "female",
-      "id": 6
-    },
-    {
       "fname": "Dnyanu",
       "pan": "DKSPG2956T",
       "email": "dnyanu@gmail.com",
       "password": "8501",
       "conpassword": "8501",
       "gender": "male",
-      "id": 7
+      "id": 3
     }
   ],
   "user": [],
@@ -74,10 +39,11 @@
       "room": "23",
       "price": "1200",
       "hotelimages": "C:\\fakepath\\hotel2.jpg",
+      "username": "Dnyanu",
       "id": 1
     },
     {
-      "ownername": "pavan",
+      "ownername": "dnyanu",
       "ownermobile": 23244432,
       "hotelname": "dwaraka",
       "hoteladdress": "tilari",
@@ -86,18 +52,20 @@
       "room": "20",
       "price": "2399",
       "hotelimages": "C:\\fakepath\\hotel7.jpg",
+      "username": "pavan",
       "id": 2
     },
     {
       "ownername": "ram",
       "ownermobile": "1234345465",
-      "hotelname": "sagar hotel",
+      "hotelname": "sagar ",
       "hoteladdress": "pune",
       "hotelmobile": "1234454554",
       "rating": "4",
       "room": "45",
-      "price": "800",
-      "hotelimages": "C:\\fakepath\\HOTEL3.jpg",
+      "price": "45",
+      "hotelimages": "C:\\fakepath\\hotel8.jpg",
+      "username": "ram",
       "id": 3
     },
     {
@@ -110,7 +78,47 @@
       "room": "25",
       "price": "1350",
       "hotelimages": "C:\\fakepath\\hotel6.jpg",
+      "username": "pavan",
       "id": 4
+    },
+    {
+      "ownername": "ram",
+      "ownermobile": "4578418741",
+      "hotelname": "taj",
+      "hoteladdress": "mumbai",
+      "hotelmobile": "5468749852",
+      "rating": "5",
+      "room": "41",
+      "price": "30000",
+      "hotelimages": "C:\\fakepath\\hotel4.jpg",
+      "username": "ram",
+      "id": 5
+    },
+    {
+      "ownername": "dnyanu",
+      "ownermobile": "4854646549",
+      "hotelname": "Raj That",
+      "hoteladdress": "pune",
+      "hotelmobile": "5456874123",
+      "rating": "3",
+      "room": "85",
+      "price": "1200",
+      "hotelimages": "C:\\fakepath\\hotel2.jpg",
+      "username": "Dnyanu",
+      "id": 6
+    },
+    {
+      "ownername": "Dnyanu",
+      "ownermobile": "4588465487",
+      "hotelname": "rankala",
+      "hoteladdress": "kolhapur",
+      "hotelmobile": "5646874",
+      "rating": "2",
+      "room": "22",
+      "price": "1200",
+      "hotelimages": "C:\\fakepath\\hotel13.jpg",
+      "username": "Dnyanu",
+      "id": 7
     }
   ],
   "hotelBooking": []

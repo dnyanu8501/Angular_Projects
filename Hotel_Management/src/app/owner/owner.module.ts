@@ -25,14 +25,15 @@ import { SearchListPipe } from './pipes/search-list.pipe';
     HotelListComponent,
     ChangeimagepathPipe,
     SearchListPipe,
-   
+  
 
    
   ],
   imports: [
     CommonModule,
     OwnerRoutingModule,
-    SharedModule
+    SharedModule,
+   
 
   ]
 })

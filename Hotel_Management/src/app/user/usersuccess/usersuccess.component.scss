@@ -12,8 +12,10 @@
     height: 185px;
     background-color: aliceblue;
     margin: 50px;
- 
-  
+   
+}
+.container:hover{
+  background-color: rgb(215, 244, 244);
 }
 img{
     float: left;
@@ -73,6 +75,10 @@ label{
    margin-left: 60px;
    border-radius: 10px;
   }
+  .backbtn:hover{
+    background-color: white;
+    color: black;
+  }
 
 
 
@@ -88,21 +94,16 @@ th{
     font-size: 22px;
     color: rgb(78, 85, 85);
   }
-  .btnDelete{
-    background-color: red;
-    padding: 4px;
+
+  .bookingbtn{
+    padding: 5px;
     border-radius: 5px;
+    background-color: green;
+    color: white;
   }
-  .btnDelete:hover{
-    background-color: rgb(201, 46, 46);
-    box-shadow: 2px 2px 3px black;
-  }
-  .btnEdit{
-    background-color: aquamarine;
-    padding: 4px;
-    border-radius: 5px;
-  }
-  .btnEdit:hover{
-    background-color: rgb(62, 194, 150);
-    box-shadow: 2px 2px 3px black;
+  .bookingbtn:hover{
+    background-color: rgb(42, 56, 29);
+    box-shadow: 4px 4px 4px rgb(78, 207, 227);
+    margin-left: 5px;
+    padding: 6px;
   }
