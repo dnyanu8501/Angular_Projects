@@ -33,5 +33,8 @@ export class UsersuccessComponent {
     back(){
       this.router.navigateByUrl('')
     }
+    bookNow(){
+      this.router.navigateByUrl("user/")
+    }
 
 }

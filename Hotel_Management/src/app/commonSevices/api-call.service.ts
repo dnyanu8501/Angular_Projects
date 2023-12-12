@@ -9,12 +9,14 @@ export class ApiCallService {
  loginUserName:any;
  url="http://localhost:3000/"
   id: any;
+ 
   recordById:any;
 
 
+
   constructor(private httpClient:HttpClient) { }
- 
- 
+  
+
   postApiCall(endPoint:any,formData:any){
     let url= this.url+endPoint
     return this.httpClient.post(url,formData)
@@ -27,9 +29,12 @@ export class ApiCallService {
 
  patchApiCall(endPoint:any,id:any,formData:any){
   let url=this.url+endPoint+"/"+id;
- 
-
   return this.httpClient.patch(url,formData)
+ }
+
+ deleteApiCall(endPoint:any,id:any){
+  let url=this.url+endPoint+"/"+id;
+  return  this.httpClient.delete(url);
  }
 
 }

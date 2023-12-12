@@ -41,11 +41,13 @@
       <!-- <br>
           <label class="note"><b>Note :</b>   user name and owner name should be same</label> -->
           <br>
-       <button  *ngIf="!recordById" [disabled]="!registerForm.valid" (click)="submit()">Submit</button>
-       <button *ngIf="recordById" (click)="update()">Update</button>
-       <button>Reset</button>
+          <div> <button  (click)="submit()">Submit</button>
+            <button (click)="update()">Update</button>
+          </div>
+      
+       
        
        </div>
     </form>
 </div>
-</div>
+</div> 
