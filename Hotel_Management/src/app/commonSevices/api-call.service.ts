@@ -9,7 +9,9 @@ export class ApiCallService {
  loginUserName:any;
  url="http://localhost:3000/"
   id: any;
- 
+
+  bookNowId:any;
+ recordByBookNowId:any;
   recordById:any;
 
 

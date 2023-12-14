@@ -10,22 +10,22 @@ import { ApiCallService } from 'src/app/commonSevices/api-call.service';
 })
 export class UserSignupComponent {
   showpass:boolean=true;
-  signControlForm!:FormGroup;
+  userSignupForm!:FormGroup;
   genderselector:boolean=false;
   pass=false;
   conpass=false;
   password:any;
   conPassword:any;
   checkpass:boolean=true;
-  endPoint:string="owner";
+  endPoint:string="user";
 
   constructor(private fb:FormBuilder ,private router :Router,private apiCallService:ApiCallService ){}
   ngOnInit(){
     this.signupData();
   }
   signupData(){
-    this.signControlForm=this.fb.group({
-      fname:['',[Validators.maxLength(15) ,Validators.pattern('[a-zA-Z ]*'),Validators.required]],
+    this.userSignupForm=this.fb.group({
+      userName:['',[Validators.maxLength(15) ,Validators.pattern('[a-zA-Z ]*'),Validators.required]],
       
       pan: ['',[this.whitespacefun,Validators.maxLength(15),Validators.pattern('[A-Z 1-9]*'),Validators.required]],
     
@@ -47,7 +47,7 @@ export class UserSignupComponent {
     let customwhite=customval.value?customval.value?.trim().length==0:null;
     return customwhite ? {'whiteSpace': true}:null;
   }
-  confirmPass(){
+  confirmPass(){ 
     if(this.password==this.conPassword){
        this.checkpass=true
     }else{
@@ -57,35 +57,19 @@ export class UserSignupComponent {
   
 
   submit(){
-    this.apiCallService.postApiCall(this.endPoint,this.signControlForm.value).subscribe(res =>{
-       this.router.navigateByUrl('owner/ownerlogin');
+    this.apiCallService.postApiCall(this.endPoint,this.userSignupForm.value).subscribe(res =>{
+       
+      console.log(res);
+      this.router.navigateByUrl('user');
     })
 
-
-
-
-
-
-
-    // console.log(this.password);
-    
-    // let genvalue=this.signControlForm.value.gender;
-    // if(genvalue){
-    // console.log('data',this.signControlForm.value);
-    // this.signControlForm.reset();
-    
-    // }
-    // else{
-    //   this.genderselector=true;
-    //   return;
-    // }
   } 
   genselect(){
     this.genderselector=false;
   }
 
   back(){
-    this.router.navigateByUrl("owner/ownerlogin");
+    this.router.navigateByUrl("user");
   }
   hidepass(){
     this.pass=!this.pass;

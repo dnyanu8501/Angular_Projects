@@ -1,0 +1,91 @@
+<div class="main">
+    <form [formGroup]="hotelBookingForm">
+       <div class="container">
+        <label class="backbtn" (click)="back()">Back</label>
+         <h2>Hotel Booking</h2>
+         <table>
+            <tr>
+             <th> Name</th>
+             <th>Contact</th>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" formControlName="name" >
+                    <br>
+                    <span *ngIf="hotelBookingForm.get('name')?.errors?.['required'] && hotelBookingForm.get('name')?.touched" class="err">Required field</span>
+                    <span *ngIf="!hotelBookingForm.get('name')?.errors?.['required'] && hotelBookingForm.get('name')?.errors?.['pattern']" class="err">Enter Valide Format</span>
+                </td>
+                <td>
+                    <input type="text" formControlName="contact" minlength="10" maxlength="10">
+                    <br>
+                    <span *ngIf="hotelBookingForm.get('contact')?.errors?.['required'] && hotelBookingForm.get('contact')?.touched" class="err">Required field</span>
+                    <span *ngIf="!hotelBookingForm.get('contact')?.errors?.['required'] && hotelBookingForm.get('contact')?.errors?.['pattern']" class="err">Enter Number Only</span>
+                </td>
+            </tr>
+            <tr>
+                <th></th>
+                <th></th>
+               </tr>
+               <tr>
+                   <td>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Enter booking date range</mat-label>
+                        <mat-date-range-input [formGroup]="hotelBookingForm" [rangePicker]="picker">
+                            <input matStartDate formControlName="start" placeholder="Start date">
+                            <input matEndDate formControlName="end" placeholder="End date">
+                        </mat-date-range-input>
+                        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-date-range-picker #picker></mat-date-range-picker>
+
+                        <!-- <mat-error *ngIf="hotelBookingForm.controls.start.hasError('matStartDateInvalid')">Invalid start
+                            date</mat-error>
+                        <mat-error *ngIf="hotelBookingForm.controls.end.hasError('matEndDateInvalid')">Invalid end date</mat-error> -->
+                    </mat-form-field>
+   
+                   </td>
+                   <td>
+                    <mat-form-field >
+                        <mat-label>No of Guests</mat-label>
+                        <mat-select formControlName="guests">
+                          <mat-option value="1">1</mat-option>
+                          <mat-option value="2">2</mat-option>
+                          <mat-option value="many">3 or more</mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                      <br>
+                       <!-- <input type="text" formControlName="guests"> -->
+                       <span *ngIf="hotelBookingForm.get('guests')?.errors?.['required'] && hotelBookingForm.get('guests')?.touched" class="err">Required field</span>
+                   </td>
+               </tr>
+               <tr>
+                <th></th>
+                <th> Booking Amount</th>
+               </tr>
+               <tr>
+                   <td>
+                       <!-- <input type="text" formControlName="paymentMethod"> -->
+                       <mat-form-field  >
+                        <mat-label>Payment Method</mat-label>
+                        <mat-select formControlName="paymentMethod">
+                          <mat-option value="upi">UPI</mat-option>
+                          <mat-option value="qr" (click)="qrCode()">QR Code</mat-option>
+                     
+                        </mat-select>
+                      </mat-form-field>
+                      <br>
+                       <span *ngIf="hotelBookingForm.get('paymentMethod')?.errors?.['required'] && hotelBookingForm.get('paymentMethod')?.touched" class="err">Required field</span>
+                    
+                   </td>
+                   <td>
+                       <input class="amountTextField" type="text" formControlName="amount" readonly>
+
+                   </td>
+               </tr>
+               <br>
+               <br>
+              
+         </table>
+         <button mat-raised-button color="accent" (click)="submitData()">BOOK </button>
+       </div>
+    </form>
+</div>

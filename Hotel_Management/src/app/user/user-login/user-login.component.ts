@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { ApiCallService } from 'src/app/commonSevices/api-call.service';
 
 @Component({
   selector: 'app-user-login',
@@ -12,11 +13,39 @@ export class UserLoginComponent {
   showpass2:boolean=true;
   showForgotDiv:boolean=false;
   matcherr:boolean=false;
-constructor(private router:Router) {}
+  endPoint='user';
+  signupData:any;
+  userName:any;
+  password:any;
+  loginFail:boolean=false
+constructor(private router:Router,private apiCallService:ApiCallService) {}
+
+ngOnInit(){
+  this.getDataFromSignup();
+}
+
+ async getDataFromSignup(){
+  this.signupData= await this.apiCallService.getApiCall(this.endPoint).toPromise()
+
+}
+
+
 
 loginData(data:any){
- console.log(data);
+  this.signupData.forEach((ele:any) => {
+    this.userName=ele.userName;
+    this.password=ele.password;
+   
+
+  
+ if(this.userName==data.userName  && this.password==data.password){
+  this.loginFail=false;
   this.router.navigateByUrl("user/success")
+ }else{
+  this.loginFail=true
+  
+}
+});
 }
 userSignup(){
   this.router.navigateByUrl("user/signup");

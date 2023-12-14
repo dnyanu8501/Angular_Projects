@@ -31,10 +31,18 @@ export class UsersuccessComponent {
       })
     }
     back(){
-      this.router.navigateByUrl('')
+      this.router.navigateByUrl('user')
     }
-    bookNow(){
-      this.router.navigateByUrl("user/")
+    bookNow(id:any){
+      let bookingData1:any=[];
+      this.registerData.forEach((ele:any)=>{
+        if(id==ele.id){
+          bookingData1.push(ele)
+        }
+      })
+    this.apiCallService.recordByBookNowId=bookingData1
+      this.apiCallService.bookNowId=id
+      this.router.navigateByUrl("user/hotelBooking")
     }
 
 }

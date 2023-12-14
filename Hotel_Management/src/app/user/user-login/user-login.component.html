@@ -6,7 +6,7 @@
     <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0m3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z"/>
   </svg>
     
-    <form *ngIf="!showForgotDiv" #loginForm="ngForm" >
+    <form *ngIf="!showForgotDiv" #loginForm="ngForm" autocomplete="off">
       <h2>Login</h2>
     <br>
         <mat-form-field class="example-full-width">
@@ -24,7 +24,7 @@
           </mat-form-field>
           <!-- <mat-error>Please enter a valid Password</mat-error> -->
           <mat-error *ngIf="password.touched && password.errors?.['required']" >Password is <strong>required</strong></mat-error>
-          <mat-error >Wrong Password & Username </mat-error>
+          <mat-error *ngIf="loginFail" >Wrong Password & Username </mat-error>
           <br>
           
           <button mat-raised-button color="accent" (click)="loginData(loginForm.value)"   >Login</button>
@@ -66,7 +66,7 @@
       <br>
       <button mat-raised-button color="accent"  (click)="newpass.value && conpass.value ? forsubmit(forgotForm.value):null" >submit</button>
         <br>
-        <label ><u style="color: blue;" (click)="goLoginPage()">Click Here</u> Go To Login Page</label>
+        <label ><u class="backLink" style="color: blue;" (click)="goLoginPage()">Click Here</u> Go To Login Page</label>
   </form>
 </div>
 </body>

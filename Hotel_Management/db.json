@@ -27,7 +27,26 @@
       "id": 3
     }
   ],
-  "user": [],
+  "user": [
+    {
+      "userName": "raj",
+      "pan": "GGH334",
+      "email": "Dnyanu@gmail.com",
+      "password": "1234",
+      "conpassword": "1234",
+      "gender": "male",
+      "id": 1
+    },
+    {
+      "userName": "pravin",
+      "pan": "FS",
+      "email": "sdas@hama.ibn",
+      "password": "1234",
+      "conpassword": "1234",
+      "gender": "male",
+      "id": 2
+    }
+  ],
   "hotelDetails": [
     {
       "ownername": "dnyanu",
@@ -90,7 +109,7 @@
       "rating": "4",
       "room": "44",
       "price": "45",
-      "hotelimages": "",
+      "hotelimages": "C:\\fakepath\\hotel15.jpg",
       "username": "ram",
       "id": 5
     }
