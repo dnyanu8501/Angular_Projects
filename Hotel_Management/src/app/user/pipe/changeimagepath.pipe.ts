@@ -10,8 +10,6 @@ export class ChangeimagepathPipe implements PipeTransform {
     console.log(value);
     let change=value.slice(12,);
     console.log(change);
-   
-    
     
     return change;
     }

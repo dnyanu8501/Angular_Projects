@@ -114,5 +114,26 @@
       "id": 5
     }
   ],
-  "hotelBooking": []
+  "hotelBooking": [
+    {
+      "name": "ajinkya patil",
+      "contact": "9455455245",
+      "start": "2023-12-19T18:30:00.000Z",
+      "end": "2023-12-21T18:30:00.000Z",
+      "guests": "2",
+      "paymentMethod": "upi",
+      "amount": 2598,
+      "id": 1
+    },
+    {
+      "name": "prashant dure",
+      "contact": "7548544554",
+      "start": "2023-12-16T18:30:00.000Z",
+      "end": "2023-12-19T18:30:00.000Z",
+      "guests": "2",
+      "paymentMethod": "upi",
+      "amount": 3600,
+      "id": 2
+    }
+  ]
 }

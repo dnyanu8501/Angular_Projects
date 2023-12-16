@@ -6,3 +6,4 @@ describe('ChangeimagepathPipe', () => {
     expect(pipe).toBeTruthy();
   });
 });
+ 

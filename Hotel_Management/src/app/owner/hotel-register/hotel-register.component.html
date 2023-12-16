@@ -41,8 +41,8 @@
       <!-- <br>
           <label class="note"><b>Note :</b>   user name and owner name should be same</label> -->
           <br>
-          <div> <button  (click)="submit()">Submit</button>
-            <button (click)="update()">Update</button>
+          <div> <button *ngIf="btnSubmit" (click)="submit()">Submit</button>
+            <button  *ngIf="!btnSubmit" (click)="update()">Update</button>
           </div>
       
        

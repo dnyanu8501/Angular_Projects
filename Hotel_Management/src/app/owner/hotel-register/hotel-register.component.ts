@@ -15,17 +15,25 @@ export class HotelRegisterComponent {
   user:any;
   id:any;
   recordById!:any;
- 
+  btnSubmit:any=true
 
 constructor(private router:Router,private fb:FormBuilder,private apiCallService:ApiCallService){
   
 }
 ngOnInit(){
  
+ 
+
   this.id=this.apiCallService.id;
   this.recordById=this.apiCallService.recordById;
   this.user=this.apiCallService.loginUserName
-  
+if(this.apiCallService.recordById)
+{
+  this.btnSubmit=false
+}else{
+  this.btnSubmit=true
+}
+
   this.formAllData()
 
   
@@ -33,6 +41,11 @@ ngOnInit(){
 
 formAllData(){
 //  console.log(this.user);
+// if(this.recordById){
+//   this.btnSubmit=false
+// }else{
+//   this.btnSubmit=true
+// }
  
   this.registerForm=this.fb.group({
     ownername:[this.recordById ? this.recordById[0]?.ownername:'',[Validators.required,Validators.pattern('[a-zA-z ]*')]],
