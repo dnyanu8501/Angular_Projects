@@ -6,6 +6,7 @@ import { OwnerSuccessComponent } from './owner-success/owner-success.component';
 import { HotelRegisterComponent } from './hotel-register/hotel-register.component';
 import { HotelListComponent } from './hotel-list/hotel-list.component';
 import { LandingComponent } from '../commonScreen/landing/landing.component';
+import { BookingCustomerListComponent } from './booking-customer-list/booking-customer-list.component';
 
 const routes: Routes = [
   {path: "", component:OwnerLoginComponent},
@@ -14,7 +15,8 @@ const routes: Routes = [
   {path:"ownersuccess", component:OwnerSuccessComponent},
   {path:"register", component:HotelRegisterComponent},
   {path:"hotelList",component:HotelListComponent},
-  {path:'home', component:LandingComponent}
+  {path:'home', component:LandingComponent},
+  {path:"customerBookingList",component:BookingCustomerListComponent}
 ];
 
 @NgModule({

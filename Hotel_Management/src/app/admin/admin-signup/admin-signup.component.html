@@ -1,0 +1,76 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+<body>
+  <div class="container">
+      <form [formGroup]="userSignupForm">
+      <p class="back" (click)="back()">Back</p>
+      <h1 class="title1">Sign Up </h1>
+     
+          <div class="main">
+              <div class="input-box">
+                  <label >Admin Name</label>
+                  <input type="text" placeholder="Enter Your name" formControlName="adminName" ><br>
+                  <span class="err" *ngIf="userSignupForm.get('adminName')?.errors?.['required']&& userSignupForm.get('adminName')?.touched">Required Field</span>
+                  <span class="err" *ngIf="userSignupForm.get('adminName')?.errors?.['maxlength']">Enter maximum 15 character allowed</span>
+                  <span class="err" *ngIf="!userSignupForm.get('adminName')?.errors?.['maxlength'] && userSignupForm.get('adminName')?.errors?.['pattern']">Only Character Allowed</span>
+                 
+                  <!-- <span class="err" *ngIf="userSignupForm.get('adminName')?.errors?.['Required'] && userSignupForm.get('adminName')?.touched">Required Feild</span> -->
+                
+                  <br>
+                  <label >PAN</label>
+                  <input type="text" placeholder="Enter PAN No." formControlName="pan"><br>
+                  <span class="err" *ngIf="userSignupForm.get('pan')?.errors?.['required']&& userSignupForm.get('pan')?.touched">Required Field</span>
+                  <span class="err" *ngIf="userSignupForm.get('pan')?.errors?.['maxlength']"> Maximum 12 Number Allowed</span>
+                  <span class="err" *ngIf="!userSignupForm.get('pan')?.errors?.['maxlength'] && userSignupForm.get('pan')?.errors?.['pattern']">Enter Valid PAN No.</span> 
+                  <span class="err" *ngIf="!userSignupForm.get('pan')?.errors?.['maxlength'] && userSignupForm.get('pan')?.dirty && userSignupForm.get('pan')?.errors?.['whiteSpace']">White Spaces are not allowed</span>
+                  <br>
+                  <label >Email</label>
+                  <input type="text" placeholder="Enter Your Email" formControlName="email"><br>
+                  <span class="err" *ngIf="userSignupForm.get('email')?.errors?.['required']&& userSignupForm.get('email')?.touched">Required Field</span>
+                  <span class="err" *ngIf="userSignupForm.get('email')?.errors?.['pattern']">Enter Valid Email</span>
+
+                  <br>
+                  <label>Password</label>
+                  <input  placeholder="Enter Password" [(ngModel)]="password"  [type]="pass? 'text': 'password'" (change)="confirmPass()" formControlName="password" >
+                 
+                   <span class="passicon" *ngIf="pass" (click)="hidepass()"> <i class="bi bi-eye-fill"></i></span>
+                   <span class="passicon" *ngIf="!pass" (click)="hidepass()"><i class="bi bi-eye-slash-fill"></i></span>
+            <br> 
+            <span class="err" *ngIf="userSignupForm.get('password')?.errors?.['required']&& userSignupForm.get('password')?.touched">Required Field</span>
+            <span class="err" *ngIf="userSignupForm.get('password')?.errors?.['maxlength']"> Maximum 15 Character Allowed</span>
+            <span class="err" *ngIf="!userSignupForm.get('password')?.errors?.['maxlength'] && userSignupForm.get('password')?.errors?.['pattern']"> Enter Strong Password</span>
+                  <br>
+                  <label  maxlength="10">Confirm Password</label>
+                  <input [type]="conpass? 'text':'password'" (change)="confirmPass()" [(ngModel)]="conPassword" placeholder="Enter Confirm Password" formControlName="conpassword"><br>
+                  <span class="err" *ngIf="userSignupForm.get('conpassword')?.errors?.['required']&& userSignupForm.get('conpassword')?.touched">Required Field</span>
+                  <span class="passicon" *ngIf="conpass" (click)="hideconpass()"> <i class="bi bi-eye-fill"></i></span>
+                   <span class="passicon" *ngIf="!conpass" (click)="hideconpass()"><i class="bi bi-eye-slash-fill"></i></span>
+                  <span class="err" *ngIf="userSignupForm.get('conpassword')?.errors?.['maxlength']"> Maximum 15 Character Allowed</span>
+                   <span class="err" *ngIf="!userSignupForm.get('conpassword')?.errors?.['maxlength'] && userSignupForm.get('conpassword')?.errors?.['pattern']"> Enter Strong Password</span>
+                  <span class="err" *ngIf="!userSignupForm.get('conpassword')?.errors?.['required'] && !checkpass">password not match</span>
+                   <br>
+                  
+                 
+              </div>
+             
+          </div>
+          
+              
+                  <label >Gender :-</label>
+                  <!-- <input type="radio" formControlName="gender" value="Male" (change)="genselect()" >Male
+                  <input type="radio" formControlName="gender" value="Female" (change)="genselect()">Female -->
+                  <mat-radio-group aria-label="Select an option" formControlName="gender">
+                    <mat-radio-button  value="male">Male</mat-radio-button>
+                    <mat-radio-button value="female">Female</mat-radio-button>
+                  </mat-radio-group>            
+                  <br>
+                  <span class="err" *ngIf="genderselector">Please Select Gender </span>
+<br>
+        
+              <!-- <i class="bi bi-eye-fill"></i> -->
+
+              <button class="btn" (click)="submit()" [disabled]="!userSignupForm.valid">submit</button>
+              <!-- <button class="btn" (click)="submit()" [disabled]="!userSignupForm.valid">Submit</button> -->
+         
+      </form>
+  </div>
+</body>

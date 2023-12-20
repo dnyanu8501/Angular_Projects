@@ -1,0 +1,33 @@
+.main{
+    background-image: url("../../../assets/images/the-anam-_twiIcIsp2s-unsplash.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 550px;
+
+}
+.container{
+    margin: auto;
+    text-align: center;
+    margin-top: 30px;
+}
+.backBtn{
+    float: right;
+    margin: 20px;
+    padding: 7px 15px 7px 15px;
+    border-radius: 10px;
+  
+}
+.backBtn:hover{
+    color: white;
+    background-color: black;
+}
+.btn{
+    margin: 30px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: burlywood;
+}
+.btn:hover{
+    background-color: rgb(154, 203, 233);
+    box-shadow: 4px 4px 3px rgb(7, 7, 7);
+}

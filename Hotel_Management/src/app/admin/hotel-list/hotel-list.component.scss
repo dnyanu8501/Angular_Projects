@@ -1,0 +1,118 @@
+.main{
+    background-image: url(../../../assets/images/hotel15.jpg);
+    background-size: cover;
+    height: 530px;
+    padding-top: 80px;
+    position: absolute;
+ 
+   
+ 
+}
+.container{
+    height: 185px;
+    background-color: aliceblue;
+    margin: 50px;
+ 
+  
+}
+img{
+    float: left;
+    padding: 7px;
+}
+.hoteldetail{
+ margin-left: 20px;
+  text-align: center;
+  position: sticky;
+
+}
+// .main2{
+//     float: right;
+//     margin-right: 30px;
+//     position: sticky;
+//     // position: absolute;
+//     // padding-bottom: 15px;
+   
+// }
+label{
+   padding-left: 100px;
+  
+}
+
+
+.fix{
+    position: sticky;
+    height: 15px;
+    top: 0px;
+    /* z=positive element will come in front */
+    z-index: 1;
+    width: 1406px;
+   
+}
+.overflowTest {
+    // background: #4CAF50;
+    // color: white;
+    padding: 15px;
+    width: 90%;
+    height: 480px;
+    overflow: scroll;
+    border: 1px solid #ccc;
+  }
+  input[type="search"]{
+    color: rgb(24, 23, 23);
+    background-color: #ffffff;
+    padding: 10px;
+    width: 60%;
+    border-radius: 20px;
+    margin-left: 40px;
+  }
+  .backbtn{
+    padding: 5px;
+    color: white;
+    background-color: black;
+    font-size: 18px;
+   margin-left: 60px;
+   border-radius: 10px;
+  }
+
+
+
+th{
+ padding: 5px;
+ padding-left:26px;
+ text-align: start;
+  }
+  td{
+    text-align: start;
+  }
+  .price{
+    font-size: 22px;
+    color: rgb(78, 85, 85);
+  }
+  .btnDelete{
+    background-color: red;
+    padding: 4px;
+    border-radius: 5px;
+  }
+  .btnDelete:hover{
+    background-color: rgb(201, 46, 46);
+    box-shadow: 2px 2px 3px black;
+  }
+  .btnEdit{
+    background-color: aquamarine;
+    padding: 4px;
+    border-radius: 5px;
+  }
+  .btnEdit:hover{
+    background-color: rgb(62, 194, 150);
+    box-shadow: 2px 2px 3px black;
+  }
+  .btncutomer{
+    color: #1e201e;
+    float: right;
+    background-color: rgb(121, 220, 16);
+    border-radius: 10px;
+    text-align: center;
+    margin: auto;
+    margin: 5px;
+    padding: 5px;
+  }

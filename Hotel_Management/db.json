@@ -1,10 +1,24 @@
 {
-  "admin": [],
+  "admin": [
+    {
+      "adminName": "Admin",
+      "pan": "GJ43J",
+      "email": "admin7@gmail.com",
+      "password": "Admin",
+      "conpassword": "Admin",
+      "gender": "male",
+      "id": 1
+    },
+    {
+      "id": 2
+    }
+  ],
   "owner": [
     {
       "fname": "ram",
       "pan": "JHS37H6",
       "email": "ram1@gmail.com",
+      "gender": "male",
       "password": "1234",
       "conpassword": "1234",
       "id": 1
@@ -13,6 +27,7 @@
       "fname": "pavan",
       "pan": "GF36G4",
       "email": "pavan1@gmail.com",
+      "gender": "male",
       "password": "12345",
       "conpassword": "12345",
       "id": 2
@@ -88,28 +103,15 @@
       "id": 3
     },
     {
-      "ownername": "pavan patil",
-      "ownermobile": "5874875498",
-      "hotelname": "shiv",
-      "hoteladdress": "Munbai",
-      "hotelmobile": "8865468752",
+      "ownername": "ram",
+      "ownermobile": "8975416768",
+      "hotelname": "dwarka",
+      "hoteladdress": "Goa",
+      "hotelmobile": "8774854748",
       "rating": "4.2",
-      "room": "54",
-      "price": "1600",
-      "hotelimages": "C:\\fakepath\\HOTEL3.jpg",
-      "username": "pavan",
-      "id": 4
-    },
-    {
-      "ownername": "ghhjgvgh",
-      "ownermobile": "456645",
-      "hotelname": "jbhkjh",
-      "hoteladdress": "jkljk",
-      "hotelmobile": "4546385",
-      "rating": "4",
-      "room": "44",
-      "price": "45",
-      "hotelimages": "C:\\fakepath\\hotel15.jpg",
+      "room": "65",
+      "price": "1520",
+      "hotelimages": "C:\\fakepath\\hotel11.jpg",
       "username": "ram",
       "id": 5
     }
@@ -122,6 +124,7 @@
       "end": "2023-12-21T18:30:00.000Z",
       "guests": "2",
       "paymentMethod": "upi",
+      "HotelName": "dwarka",
       "amount": 2598,
       "id": 1
     },
@@ -132,8 +135,43 @@
       "end": "2023-12-19T18:30:00.000Z",
       "guests": "2",
       "paymentMethod": "upi",
+      "HotelName": "dwarka",
       "amount": 3600,
       "id": 2
+    },
+    {
+      "name": "ram",
+      "contact": "5549874249",
+      "start": "2023-12-17T18:30:00.000Z",
+      "end": "2023-12-20T18:30:00.000Z",
+      "guests": "2",
+      "paymentMethod": "qr",
+      "HotelName": "dwarka",
+      "amount": 3600,
+      "id": 3
+    },
+    {
+      "name": "dnaynu",
+      "contact": "7846548974",
+      "start": "2023-12-17T18:30:00.000Z",
+      "end": "2023-12-19T18:30:00.000Z",
+      "guests": "2",
+      "paymentMethod": "upi",
+      "HotelName": "dwarka",
+      "amount": 2400,
+      "id": 4
+    },
+    {
+      "name": "raj patil",
+      "contact": "5557981574",
+      "start": "2023-12-10T18:30:00.000Z",
+      "end": "2023-12-12T18:30:00.000Z",
+      "guests": "2",
+      "paymentMethod": "cash",
+      "amount": 2598,
+      "HotelName": "Ajinkya Tara",
+      "id": 5
     }
+   
   ]
 }

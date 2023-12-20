@@ -1,0 +1,42 @@
+.main{
+ 
+    text-align: center;
+    background-image: url("../../../assets/images/wallpaperflare.com_wallpaper.jpg");
+    height: 550px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+
+}
+td,tr,th{
+    padding: 8px;
+    border: 2px solid black;
+    padding-right: 24px;
+}
+th{
+    background-color: rgb(235, 228, 34);
+
+}
+table{
+    border-collapse: collapse;
+}
+.container{
+    margin-left: 20%;
+    margin-right: 20%;
+    background-color: rgb(195, 166, 166);
+
+  
+}
+.backBtn{
+    float: right;
+    margin: 30px;
+    margin-right: 50px;
+    padding: 7px 15px 7px 15px;
+    border-radius: 10px;
+  
+}
+.backBtn:hover{
+    color: white;
+    background-color: black;
+}

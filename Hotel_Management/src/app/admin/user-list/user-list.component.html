@@ -1,0 +1,41 @@
+<div class="main">
+    <h2>USER LIST</h2>
+    <div class="fix">
+        <input type="search"  placeholder="search" > 
+       <button class="backbtn" routerLink="/admin/success" >Back</button>
+    </div>
+    <div class="container">
+     <div class="details" *ngFor=" let data of ownerData">
+        <table> 
+           
+                <img src="../../../assets/images/user.png" alt="" width="150px" height="100px">
+             
+                
+            <tr>
+                <th> Owner Name</th>
+                <td>{{data.userName}}</td>
+            </tr>
+            <tr>
+                <th>PAN</th>
+                <td>{{data.pan}}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{data.email}}</td>
+            </tr>
+            <tr>
+                <th>Gender</th>
+                <td>{{data.gender}}</td>
+            </tr>
+            <tr>
+                <th>Password</th>
+                <td>{{data.password}}</td>
+            </tr>
+         </table>
+     </div>
+    
+     
+   
+    </div>
+</div>
+

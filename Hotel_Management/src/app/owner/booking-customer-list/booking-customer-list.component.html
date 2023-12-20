@@ -1,0 +1,26 @@
+<div class="main">
+    <button class="backBtn" routerLink="/owner/hotelList"><b>Back</b></button>
+    <h2>Booking Customer List</h2>
+    <br><br>
+    <div class="container">
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>contact</th>
+                <th>TO</th>
+                <th>FROM</th>
+                <th>GUESTS</th>
+                <th>Payment Method</th>
+                <th>Amount</th>
+            </tr>
+            <tr *ngFor="let data of bookingListByHotel">
+                <td>{{data.name}}</td>
+                <td>{{data.contact}}</td>
+                <td>{{data.start | startDate}}</td>
+                <td>{{data.end | endDate}}</td>
+                <td>{{data.guests}}</td>
+                <td>{{data.paymentMethod}}</td>
+                <td>{{data.amount}}</td>
+        </table>
+    </div>
+</div>

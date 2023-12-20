@@ -9,7 +9,7 @@ import { SearchdataPipe } from './pipe/searchdata.pipe';
 import { SharedModule } from '../shared/shared/shared.module';
 import { UserSignupComponent } from './user-signup/user-signup.component';
 import { HotelBookingComponent } from './hotel-booking/hotel-booking.component';
-import { FormsModule } from '@angular/forms';
+
 import { OrCodeComponent } from './or-code/or-code.component';
 
 

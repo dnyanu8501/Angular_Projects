@@ -15,7 +15,7 @@ constructor(private router:Router,private apiCallService:ApiCallService){}
 
   }
   register(){
-    // this.apiCallService.subBtn=true;
+    this.apiCallService.btnSubmit=true;
     this.router.navigateByUrl('owner/register')
   }
   hotelList(){

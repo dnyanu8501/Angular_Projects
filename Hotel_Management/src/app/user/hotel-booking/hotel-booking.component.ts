@@ -57,6 +57,7 @@ this.allData()
       guests:['',[Validators.required]],
       paymentMethod:['',[Validators.required]],
       amount:[this.originalAmount,[Validators.required]],
+      HotelName:[this.hotelName]
 
     })
   }
@@ -84,8 +85,9 @@ this.allData()
     })
  
    this.router.navigateByUrl('user/success')
-    
-   alert('Successfully Booking  !!!') 
+    let str=this.hotelName + "  Hotel Successfully Booking  !!!"
+   alert(str) 
+ 
  console.log(this.hotelBookingForm.value);
  
   }

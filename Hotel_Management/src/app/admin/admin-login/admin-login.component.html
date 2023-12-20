@@ -1,1 +1,68 @@
-<p>admin-login works!</p>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+<body>
+ 
+<div class="container">
+  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" (click)="backBtn()" color="blue" fill="currentColor"  class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
+    <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0m3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z"/>
+  </svg>
+    
+    <form *ngIf="!showForgotDiv" #loginForm="ngForm" autocomplete="off">
+      <h2>Admin Login</h2>
+    <br>
+        <mat-form-field class="example-full-width">
+            <mat-label>User Name</mat-label>
+            <input  #adminName="ngModel" ngModel matInput  name="adminName" required >
+          </mat-form-field>
+      <mat-error *ngIf="adminName.touched && adminName.errors?.['required']">User Name is <strong>required</strong></mat-error>
+          <br>
+          <mat-form-field class="example-full-width">
+            <mat-label>Password</mat-label>
+            <input ngModel required #password="ngModel" name="password" matInput [type]="!showpass?'text':'password'" placeholder="Enter Password" >
+            <mat-icon matSuffix *ngIf="!showpass" (click)="showIcon()" ><i class="fa fa-eye" ></i></mat-icon>
+          <mat-icon *ngIf="showpass" (click)="showIcon()" matSuffix ><i class="fa fa-eye-slash" ></i></mat-icon>
+         
+          </mat-form-field>
+          <!-- <mat-error>Please enter a valid Password</mat-error> -->
+          <mat-error *ngIf="password.touched && password.errors?.['required']" >Password is <strong>required</strong></mat-error>
+          <mat-error *ngIf="loginFail" >Wrong Password & Admin Name </mat-error>
+          <br>
+          
+          <button mat-raised-button color="accent" (click)="loginData(loginForm.value)"   >Login</button>
+          <button mat-raised-button color="warn" (click)="userSignup()" >New User?</button>
+         <br>
+        <label class="forgotBtn" (click)="divForgot()" > <u>Forgot Password</u></label>
+    </form>
+   
+    <form  [formGroup]="changePassForm" *ngIf="showForgotDiv"> 
+      <br>
+      <mat-form-field class="example-full-width">
+        <mat-label>Email</mat-label>
+        <input matInput type="email" placeholder="Enter email" >
+        <mat-icon matSuffix *ngIf="!showpass1" (click)="showIcon1()" ><i class="fa fa-eye" ></i></mat-icon>
+      <mat-icon *ngIf="showpass1" (click)="showIcon1()" matSuffix ><i class="fa fa-eye-slash" ></i></mat-icon>
+     
+      </mat-form-field>
+      <!-- <mat-error>Please enter a valid Password</mat-error> -->
+      <mat-error  class="err" *ngIf="" >Password is <strong>required</strong></mat-error>
+      
+<br>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>New Password</mat-label>
+        <input  matInput [type]="!showpass1?'text':'password'" placeholder="Change Your Password" >
+        <mat-icon matSuffix *ngIf="!showpass1" (click)="showIcon1()" ><i class="fa fa-eye" ></i></mat-icon>
+      <mat-icon *ngIf="showpass1" (click)="showIcon1()" matSuffix ><i class="fa fa-eye-slash" ></i></mat-icon>
+     
+      </mat-form-field>
+      <!-- <mat-error>Please enter a valid Password</mat-error> -->
+      <mat-error  class="err" *ngIf="" >Password is <strong>required</strong></mat-error>
+      
+ 
+      <br>
+      <button mat-raised-button color="accent" >Change Password</button>
+        <br>
+        <label ><u class="backLink" style="color: blue;" (click)="goLoginPage()">Click Here</u> Go To Login Page</label>
+  </form>
+</div>
+</body>
+

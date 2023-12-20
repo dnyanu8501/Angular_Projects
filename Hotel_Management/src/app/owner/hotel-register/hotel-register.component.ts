@@ -2,7 +2,8 @@ import { BootstrapOptions, Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ApiCallService } from 'src/app/commonSevices/api-call.service';
-
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { SnackbarComponent } from 'src/app/snackbar/snackbar.component';
 @Component({
   selector: 'app-hotel-register',
   templateUrl: './hotel-register.component.html',
@@ -15,9 +16,10 @@ export class HotelRegisterComponent {
   user:any;
   id:any;
   recordById!:any;
-  btnSubmit:any=true
-
-constructor(private router:Router,private fb:FormBuilder,private apiCallService:ApiCallService){
+  btnSubmit:any;
+  durationInSeconds=5;
+constructor(private router:Router,private fb:FormBuilder,
+  private apiCallService:ApiCallService,private matSnackBar: MatSnackBar){
   
 }
 ngOnInit(){
@@ -27,12 +29,13 @@ ngOnInit(){
   this.id=this.apiCallService.id;
   this.recordById=this.apiCallService.recordById;
   this.user=this.apiCallService.loginUserName
-if(this.apiCallService.recordById)
-{
-  this.btnSubmit=false
-}else{
-  this.btnSubmit=true
-}
+  this.btnSubmit=this.apiCallService.btnSubmit
+// if(this.apiCallService.recordById)
+// {
+//   this.btnSubmit=false
+// }else{
+//   this.btnSubmit=true
+// }
 
   this.formAllData()
 
@@ -70,6 +73,18 @@ formAllData(){
    
   this.apiCallService.postApiCall(this.endPoint,this.registerForm.value).subscribe(res =>{
    
+
+    this.matSnackBar.openFromComponent(SnackbarComponent, {
+      duration: this.durationInSeconds * 1000,
+      verticalPosition: 'top',
+      panelClass: ['notif-success'],
+    });
+    // this.matSnackBar.open("Login Successful", "", {
+    //   duration: 3000,
+    //   panelClass: ['green-snackbar'],
+      
+    //  })
+    
     this.router.navigateByUrl("owner/ownersuccess")
   })
 }
@@ -80,6 +95,7 @@ formAllData(){
   }
 
   ngOnDestroy(){
+    this.apiCallService.btnSubmit=false
     this.apiCallService.recordById=[]
    
     

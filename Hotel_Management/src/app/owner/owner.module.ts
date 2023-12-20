@@ -10,6 +10,9 @@ import { HotelRegisterComponent } from './hotel-register/hotel-register.componen
 import { HotelListComponent } from './hotel-list/hotel-list.component';
 import { ChangeimagepathPipe } from './pipes/changeimagepath.pipe';
 import { SearchListPipe } from './pipes/search-list.pipe';
+import { BookingCustomerListComponent } from './booking-customer-list/booking-customer-list.component';
+import { StartDatePipe } from './pipes/start-date.pipe';
+import { EndDatePipe } from './pipes/end-date.pipe';
 
 
 
@@ -25,6 +28,9 @@ import { SearchListPipe } from './pipes/search-list.pipe';
     HotelListComponent,
     ChangeimagepathPipe,
     SearchListPipe,
+    BookingCustomerListComponent,
+    StartDatePipe,
+    EndDatePipe,
   
 
    

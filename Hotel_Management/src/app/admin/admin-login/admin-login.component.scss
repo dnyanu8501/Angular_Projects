@@ -1,0 +1,40 @@
+.container{
+    margin: auto;
+    text-align: center;
+    background-color: antiquewhite;
+    width: 40%;
+    border: 2px solid black;
+    border-top-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+    padding: 10px;
+    opacity: 0.9;
+    // background:transparent;
+   
+    // margin-top: 40px;
+  
+
+}
+button{
+    margin: 8px;
+}
+body{
+    // background-color: rgb(107, 107, 142);
+    padding-top: 100px;
+   
+    background-image: url("../../../assets/images/home.jpg");
+    // background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.bi-arrow-left-circle-fill{
+    float: right;
+}
+.bi-arrow-left-circle-fill:hover{
+    color: rgb(32, 30, 30);
+}
+.forgotBtn{
+    color: blue
+}
+.backLink:hover{
+   cursor: pointer;
+}

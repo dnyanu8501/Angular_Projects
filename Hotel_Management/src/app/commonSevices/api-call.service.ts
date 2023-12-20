@@ -9,11 +9,11 @@ export class ApiCallService {
  loginUserName:any;
  url="http://localhost:3000/"
   id: any;
-
+  HotelNameByList:any;
   bookNowId:any;
  recordByBookNowId:any;
   recordById:any;
-
+  btnSubmit:boolean=false
 
 
   constructor(private httpClient:HttpClient) { }

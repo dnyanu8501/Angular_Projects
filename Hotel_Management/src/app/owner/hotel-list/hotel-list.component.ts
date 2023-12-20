@@ -62,6 +62,10 @@ export class HotelListComponent {
     this.router.navigateByUrl("owner/register");
 
   }
+  bookingCustomerList(hotelName :any){
+    this.apiCallService.HotelNameByList=hotelName;
+    this.router.navigateByUrl("owner/customerBookingList")
+  }
 
   delete(id: any) {
     // this.apiCallService.deleteApiCall(this.endPoint,id).subscribe((res:any)=>{})
