@@ -1,0 +1,46 @@
+.main{
+    background-image: url("../../../src/assets/images/landscape-3369304_640.jpg");
+    height: 580px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.btnWeather{
+    margin-top: 100px;
+    float: right;
+    margin-right: 100px;
+}
+.btnSearch{
+    margin-top: 120px;
+    float: right;
+    margin-right: 150px;
+}
+.container{
+    border: 2px solid black;
+    width: 50%;
+    text-align: center;
+    margin: auto;
+    // margin-top: 100px;
+    border-radius: 10px;
+    // container: 12px;
+    background-image: url("../../assets/images/images.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.temp{
+  font-size: 50px;
+//   text-decoration-style: solid 20px
+}
+td{
+    padding-left: 10px;
+    padding-right: 30px;
+    // border: 2px solid black;
+
+
+}
+th{
+   padding-right: 10px;
+}
+.main1{
+    padding-top: 150px;
+}
