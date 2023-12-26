@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { DataService } from '../data.service';
 
 
-import { WeatherDetailsComponent } from '../weather-details/weather-details.component';
+
 @Component({
   selector: 'app-landing-screen',
   templateUrl: './landing-screen.component.html',
