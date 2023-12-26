@@ -46,6 +46,7 @@ console.log("ghgshghda",res);
 }
   showWeather(){
     this.searchBox=!this.searchBox
+    this.details=false
   }
 
 }
